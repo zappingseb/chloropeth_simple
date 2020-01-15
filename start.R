@@ -1,5 +1,7 @@
 library(ggplot2)
 library(dplyr)
+install.packages("mapproj")
+
 WorldData <- map_data('world') %>% filter(region != "Antarctica") %>% fortify
 
 df <- data.frame(region=c('Australia','Germany','Russia','Poland','Marocco'), 
